@@ -4,7 +4,35 @@ body,section.wrap {
     display: block;
     background-color: aqua;
 }
-.header h1 {
-    color: rgb(51 70 61);
+table p {
+    color: #6a3c78c9;
+    font-size: 30px;
+    font-family: fantasy;
+    font-style: italic;
+    font-weight: 500;
     text-align: center;
+    padding: 0px 50px;
+}
+table caption {
+    font-size: 35px;
+    margin: 15px 0px;
+    color: #5b5a65;
+    font-weight: 600;
+    font-family: fantasy;
+}
+table{
+    width: 650px;
+    margin: 0 auto;
+}
+table th, td {
+    background-color: #20cb1e;
+}
+table {
+    border-color: #817ea1;
+}
+body, section.wrap {
+    width: 960px;
+    margin: 0 auto;
+    display: block;
+    background-color: #000000;
 }

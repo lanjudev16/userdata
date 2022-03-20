@@ -9,15 +9,6 @@
 
 </head>
 <body>
-<section class="wrap">
-        <div class="header">
-            <h1>Learn Database Design</h1>
-        </div>
-        <div class="footer">
-
-        </div>
-    </section>
-	
 	
 	<?php 
 	include "Database.php";
@@ -26,18 +17,21 @@
 	$query="select * from tbl_user";
 	$read=$db->select($query);
 	
-	
-	
 	?>
 	<?php if($read){?>
-	<?php while($row=$read->fetch_assoc()){?>
-	<p><?php echo $row['id']; ?></p>
-	<p><?php echo $row['name']; ?></p>
-	<p><?php echo $row['email']; ?></p>
-	<?php }?>
+	<table width="500" border="2" cellpadding="5">
+		<caption>Student table</caption>
+			<?php while($row=$read->fetch_assoc()){?>
+				<tr>
+					<td><p><?php echo $row['name']; ?></p></td>
+					<td><p><?php echo $row['email']; ?></p></td>
+					<td><p><?php echo $row['skil']; ?></p></td>
+				</tr>
+			<?php }?>
+	</table>
 	<?php }else{ ?>
 	<h1>Data is not available </h1>
 	<?php }?>
-	
+
 </body>
 </html>
